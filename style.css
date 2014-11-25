@@ -1,0 +1,333 @@
+#index {
+	height: 100%;
+}
+header h2 span{
+	float:right;
+	font-weight: bold;
+}
+header h2 span[onclick]{
+	float:right;
+	font-weight: bold;
+	padding: .7rem 1.2rem;
+	margin-top: -.6rem;
+	margin-right:-2rem;
+}
+header h2 span[onclick]:active{
+	background-color:#B2F2FF;
+}
+header h2 time{
+	margin-left:1rem;
+	font-style:italic;
+}
+#drawer article li a p{
+	color:#333;
+}
+#drawer article li a p:nth-child(1){
+	font-size:1.2rem;
+	line-height:6rem;
+	float:left;
+	padding:0;
+	margin: 0 -10px 0 5px;
+}
+#drawer article li a p:nth-child(2){
+	margin-bottom: -.3rem;
+	padding-top: .4rem;
+	font-size:1.2rem;
+	line-height:1.2rem;
+}
+#drawer article li a p:nth-child(3){
+	font-size:1.8rem;	
+	line-height:3rem;
+}	
+#drawer article li.event a p:nth-child(3):before{
+	content:"";
+	font-family: "gaia-icons";
+}	
+#drawer article li a p:nth-child(4){
+	font-size:1.2rem;	
+	line-height:1.2rem;
+}
+#drawer article li a p span{
+	font-size:1.4rem;	
+	right:1rem;
+	position:absolute;
+}
+.bb-tablist,.bb-tablist>li{
+	height:3.5rem;
+}
+.bb-tablist > li > a{
+	font-size:1.4rem;
+	line-height: 4rem;
+}
+.bb-tablist:before{
+	top:3.5rem;
+}
+.bb-tablist > li.selecto > a{
+	color: #00aacc;
+	font-weight: 500;
+	background-position: 50% 100%;
+}
+.bb-tablist > li.selecto > a:after{
+	display: inline-block;
+	content: "";
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top:0;
+	height: calc(100% - 0.3rem);
+	border-bottom: 0.3rem solid #00aacc;
+}
+#panelo1,#panelo2,#panelo3,#panelo4,#panelo5,#panelo6,#panelo7{
+	margin-top:8.7rem;
+}
+[data-position="day"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 15;
+	z-index: 100;
+	transform: translateY(100%);
+	overflow:scroll;
+}
+[data-position="day"].right {
+	transform: translateY(100%);
+}
+[data-position="day"].current{
+	animation: fadeIn .3s forwards;
+	transform: translateY(0);
+}
+[data-position="right"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: translateX(100%);
+	z-index: 15;
+	z-index: 100;
+}
+section[role="region"][data-position="right"], section[role="region"][data-position="down"] {
+	position: absolute;
+}
+[data-position="right"].current {
+	animation: rightToCurrent 0.4s forwards;
+}
+[data-position="right"].right {
+	animation: currentToRight 0.4s forwards;
+}
+[data-position="down"].current {
+	animation: downToCurrent 0.4s forwards;
+}
+[data-position="down"].down {
+	animation: currentToDown 0.4s forwards;
+}
+[data-position="down"].down2 {
+	animation: currentToDown 0s forwards;
+}
+[data-position="current"].left {
+	animation: currentToLeft 0.4s forwards;
+}
+[data-position="current"].current {
+	animation: leftToCurrent 0.4s forwards;
+}
+[data-position="back"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	opacity: 0;
+}
+[data-position="back"].fade-in {
+	z-index: 120;
+	animation: fadeIn 0.2s forwards;
+}
+[data-position="back"].fade-out {
+	animation: fadeOut 0.2s forwards;
+}
+[data-position="edit-mode"] {
+	position: absolute;
+	top: -5rem;
+	left: 0;
+	right: 0;
+	bottom: -7rem;
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+[data-position="edit-mode"].edit {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 120;
+	opacity: 1;
+}
+.active {
+	background-color: #b2f2ff;
+	color: #fff;
+}
+#headers .content {
+	margin-top: -1.5rem;
+}
+#headers section[role="region"] {
+	margin-bottom: 1.5rem;
+}
+#headers section[role="region"]:not(#drawer) {
+	display: inline;
+}
+#headers article header:first-child {
+	margin-top: 1.5rem;
+}
+#headers section[role="region"] header h2 {
+	margin: 0 0 1.5rem 0;
+}
+[data-type=list] li>a:active {
+	background-color: transparent;
+}
+section[role="region"]:not(#drawer) {
+	transition: none;
+	left: 0;
+	z-index: 0;
+	padding-left: 0;
+}
+section[data-type="sidebar"] + section[role="region"] > header:first-child > button,
+section[data-type="sidebar"] + section[role="region"] > header:first-child > a {
+	background-position: 3.5rem center;
+}
+#switches div:last-child label:last-child {
+	margin-left: 2rem;
+}
+#switches div:last-child {
+	margin-left: 2rem;
+}
+nav[data-type="scrollbar"] {
+	padding-top: 1rem;
+}
+nav[data-type="scrollbar"] p {
+	opacity: 1;
+}
+#tabs .content {
+	padding: 0;
+}
+#tabs .content .content {
+	padding: 1.5rem 3rem;
+}
+.detail label+p{
+	margin-top:-4.8rem;
+	margin-left:5rem;
+}
+.detail p+p{
+	margin-top:-0.5rem;
+	margin-left:5rem;
+	color: #858585;
+	font-size:75%;
+}
+#gradesList li a{
+	width: calc(100% - 6rem);
+}
+#gradesList li button{
+	width: 6rem;
+	height: 6rem;
+	float:right;
+	top:-6rem;
+	margin:0;
+	border:none;
+	font-style:normal;
+	line-height:0;
+	background-color:transparent;
+}
+#gradesList li button:active{
+	background-color:#B2F2FF;
+}
+#gradesList strong{
+	font-weight:600;
+}
+[data-type="list"].active #gradesList li:after,
+[data-type="list"] #gradesList li > a:after {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	left: -1.5rem;
+	top: 0;
+	right: -7.5rem;
+	bottom: 0;
+}
+#inputNotes{
+	height: calc(100vh - 8rem);
+	max-height: calc(100vh - 8rem);
+}
+#viewNote{
+	font-size:1.6rem;
+}
+#uSchedule{
+	z-index:9998 !important;
+}
+#confirm7.fade-in{
+	z-index:9999 !important;
+}
+#listuNotes li{
+	max-height: 5rem;
+	overflow: hidden;
+}
+[data-type="list"] li > .pack-switch {
+line-height:6rem;
+	position: absolute;
+	left: 1.5rem;
+}
+[data-type="list"] li > .pack-switch input ~ span:after {
+	right: 0;
+	left:auto;
+}
+select[multiple]{
+	margin:0 0 -2.3rem;
+}
+select[multiple] option{
+	display:none;
+}
+#fake-select{
+	position: absolute;
+	top: 2.7rem;
+	left: 1.5rem;
+	line-height: 0rem;
+	font-size:1.7rem;
+}
+h2.bb-docs {
+	font-size: 1.8rem;
+	font-weight: 300;
+	color: #666;
+	margin: -0.1rem 0 0;
+	background-color: #f5f5f5;
+	padding: 0.4rem 0.4rem 0.4rem 3rem;
+	border: solid 0.1rem #e8e8e8;
+	margin: 0 0 .5rem;
+}
+nav ul li:last-child{
+	margin-bottom:5rem;
+}
+[data-position="day"].right{
+	display:none;
+}
+
+
+#eiroomSchedule{
+	position: absolute;
+	top: 2rem;
+	right: 3rem;
+}
+#eitypeSchedule{
+	margin:-1rem 0 0 0;
+	padding-left:1.5rem;
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+#eiteacherSchedule{
+	margin:0 0 -1rem 0;
+	padding-left:1.5rem;
+	font-size: 1.6rem;
+	line-height: 2rem;
+}

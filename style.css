@@ -312,8 +312,6 @@ nav ul li:last-child{
 [data-position="day"].right{
 	display:none;
 }
-
-
 #eiroomSchedule{
 	position: absolute;
 	top: 2rem;
@@ -330,4 +328,7 @@ nav ul li:last-child{
 	padding-left:1.5rem;
 	font-size: 1.6rem;
 	line-height: 2rem;
+}
+p.version::after{
+	content:" 1.2";
 }
